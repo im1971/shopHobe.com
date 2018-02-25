@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+body{
+
+}
+
+/*header*/
+
+#toggle-input{
+    display: none;
+}
+
+#master-header{
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.header-wrap{
+    display: flex;
+    padding: 5px 20px 5px 3px;
+}
+
+/*header logo part*/
+.header-wrap .brand-logo img{
+    height: 3rem;
+    width: 3rem;
+    /*margin-top: 2px;*/
+}
+.header-wrap .brand-logo{
+    margin: auto;
+    margin-left: 0;
+}
+.header-wrap .brand-logo h3{
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-left: 0.3em;
+    font-weight: 700;
+}
+
+.header-wrap .brand-logo .title-deco{
+    font-weight: 400;
+}
+
+/*navigation part*/
+.header-wrap .header-nav{
+    margin: auto;
+}
+
+.header-wrap .header-nav ul li{
+    display: inline-block;
+    line-height: 40px;
+}
+
+.header-wrap .header-nav ul li a,
+.mobile-nav ul li a{
+    font-size: 18px;
+    padding: 0.5rem .5rem;
+    font-weight: 700;
+}
+
+.mobile-nav{
+    text-align: center;
+    -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mobile-nav ul li{
+    line-height: 40px;
+}
+
+.mobile-nav ul{
+    list-style-type: none;
+}
+
+/*header button*/
+
+.header-wrap .btn-start-sell{
+    line-height: 40px;
+    margin: auto 0;
+}
+.header-wrap .btn-start-sell a{
+    font-weight: 600;
+    border: 1px solid #ffc400;
+    padding: 8px 16px;
+    font-size: 13px;
+    background: #ffc400;
+    color: #2e2e2e;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-family: "Century Gothic";
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.header-wrap .btn-start-sell a:hover{
+    background: rgba(255, 196, 0, 0.9);
+}
+
+
+/*background image*/
+
+.body-image{
+    background-image: url(../img/bg-pattern.svg);
+    height: 800px;
+    background-attachment: fixed;
+}
+
+.mobile-nav{
+    max-height: 0;
+    overflow: hidden;
+}
+
+/*------------Media Queries -----------*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+    .header-wrap {
+        padding: 8px 5px 8px 45px;
+    }
+
+    .header-wrap .brand-logo h3{
+        font-size: 1.2em;
+        padding-top: 2px;
+    }
+
+    .toggle-label {
+       position: absolute;
+        top: 13px;
+        padding: 0 6px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .toggle-label:after{
+        content: '';
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        background: url(../img/view-sequential.png);
+        -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        -ms-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+
+    .header-wrap .header-nav{
+        display: none;
+    }
+
+
+    #toggle-input:checked ~ .mobile-nav{
+        max-height: 1000px;
+    }
+
+    #toggle-input:checked + .toggle-label:after{
+        background: url(../img/window-close.png);
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
